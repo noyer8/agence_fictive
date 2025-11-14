@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B Immobilier — Maison familiale avec piscine</title>
+  <title>B Immobilier — Maison familiale</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,210 +12,199 @@
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
-      background: #f5f5f5;
+      background: #f6f6f6;
       color: #222;
     }
 
-    /* HEADER -------------------------------------- */
+    /* ---- HEADER DISCRET ---- */
     header {
-      background: #111;
       padding: 18px 30px;
-      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 10px;
     }
 
     header img {
-      height: 42px;
+      height: 32px;
       width: auto;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.45rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .hero {
-      width: 100%;
-      height: 420px;
-      background-image: url('https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .container {
-      max-width: 1080px;
-      margin: 40px auto;
+    /* ---- BLOC PRINCIPAL EN DEUX COLONNES ---- */
+    .wrapper {
+      max-width: 1100px;
+      margin: 20px auto 40px;
       padding: 0 20px;
+
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 28px;
+      align-items: start;
     }
 
-    h2 {
-      margin-bottom: 10px;
+    .main-photo img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .info h2 {
       font-size: 1.7rem;
+      margin-bottom: 8px;
       color: #111;
     }
 
     .price {
       font-size: 1.3rem;
       color: #1ea97b;
-      font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      font-weight: 700;
     }
 
-
-    /* BUTTONS -------------------------------------- */
-    .btn-row {
+    .buttons {
       display: flex;
-      gap: 12px;
-      margin: 25px 0 35px;
+      gap: 10px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 12px 18px;
-      border-radius: 25px;
+      padding: 10px 16px;
+      border-radius: 22px;
+      font-size: .9rem;
+      font-weight: 600;
       cursor: pointer;
       border: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: 0.2s ease;
       text-decoration: none;
       display: inline-block;
+      transition: .2s;
     }
 
     .btn-green {
       background: #1ea97b;
       color: white;
     }
-
-    .btn-green:hover { background: #18855f; }
+    .btn-green:hover { background: #158761; }
 
     .btn-gold {
       background: #cfa557;
       color: white;
     }
-
     .btn-gold:hover { background: #b48a3d; }
 
     .btn-outline {
       background: white;
-      color: #333;
       border: 2px solid #ddd;
+      color: #444;
     }
 
-    .btn-outline:hover {
-      border-color: #999;
+    .description {
+      font-size: .95rem;
+      line-height: 1.55;
+      color: #444;
     }
 
-
-    /* GALLERY -------------------------------------- */
+    /* ---- GALERIE ---- */
     .gallery {
+      max-width: 1100px;
+      margin: 20px auto 10px;
+      padding: 0 20px;
       display: grid;
-      gap: 18px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
     }
 
     .gallery img {
       width: 100%;
-      height: 220px;
+      height: 160px;
       object-fit: cover;
       border-radius: 10px;
     }
 
-
-    /* DESCRIPTION -------------------------------------- */
-    .description {
-      margin-top: 35px;
-      line-height: 1.7;
-      font-size: 1.05rem;
-    }
-
-    .description span {
-      font-weight: 600;
-      color: #111;
+    /* ---- CARACTÉRISTIQUES ---- */
+    .features {
+      max-width: 1100px;
+      margin: 15px auto 40px;
+      padding: 0 20px;
+      font-size: .95rem;
+      line-height: 1.55;
+      color: #444;
     }
 
     footer {
-      margin-top: 60px;
-      padding: 25px;
-      background: #111;
       text-align: center;
-      color: #bbb;
-      font-size: 0.9rem;
+      padding: 15px;
+      font-size: .85rem;
+      color: #777;
+    }
+
+    @media (max-width: 820px) {
+      .wrapper {
+        grid-template-columns: 1fr;
+      }
+      .main-photo img {
+        height: 260px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="https://i.imgur.com/7VZhUfZ.png" alt="Logo B Immobilier">
-  <h1>Immobilier</h1>
+  B Immobilier
 </header>
 
-<div class="hero"></div>
+<!-- BLOC PRINCIPAL -->
+<div class="wrapper">
 
-<div class="container">
-
-  <h2>Maison familiale avec piscine — Quartier résidentiel</h2>
-  <p class="price">749 000 €</p>
-
-  <!-- BUTTONS -->
-  <div class="btn-row">
-    <a href="#" class="btn btn-green">Déposer votre candidature</a>
-    <a href="#" class="btn btn-gold">Demander une visite</a>
-    <a href="#" class="btn btn-outline">+ de caractéristiques</a>
+  <!-- PHOTO PRINCIPALE -->
+  <div class="main-photo">
+    <img src="https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg">
   </div>
 
-  <p class="description">
-    Découvrez cette <span>magnifique propriété familiale</span> située dans l’un des quartiers les plus calmes et recherchés de la région. 
-    Cette maison combine parfaitement charme, élégance moderne et espaces généreux.
-    <br><br>
-    Au rez-de-chaussée, vous trouverez un vaste séjour baigné de lumière naturelle, 
-    une salle à manger ouverte sur une cuisine entièrement équipée, un coin lecture ainsi qu’un accès direct 
-    vers la terrasse et la piscine. L’étage propose <span>cinq chambres spacieuses</span> dont une suite parentale 
-    avec dressing et salle de bain privative.
-    <br><br>
-    À l’extérieur, un jardin parfaitement aménagé, une piscine privée entourée d’un espace détente, 
-    et plusieurs zones de convivialité permettent de profiter pleinement du calme environnant. 
-    Cette maison est idéale pour les familles recherchant un bien clé en main offrant confort, tranquillité et prestations haut de gamme.
-  </p>
+  <!-- INFOS -->
+  <div class="info">
+    <h2>Maison familiale avec piscine — Quartier résidentiel</h2>
+    <div class="price">749 000 €</div>
 
-  <h2>Photos du bien</h2>
+    <div class="buttons">
+      <a class="btn btn-green">Déposer votre candidature</a>
+      <a class="btn btn-gold">Demander une visite</a>
+      <a class="btn btn-outline">+ caractéristiques</a>
+    </div>
 
-  <div class="gallery">
-    <img src="https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg" alt="Façade de la maison">
-    <img src="https://images.pexels.com/photos/12700527/pexels-photo-12700527.jpeg" alt="Jardin et piscine">
-    <img src="https://images.pexels.com/photos/15580481/pexels-photo-15580481.jpeg" alt="Cuisine moderne">
-    <img src="https://images.pexels.com/photos/15580488/pexels-photo-15580488.jpeg" alt="Chambre principale">
-    <img src="https://images.pexels.com/photos/14495890/pexels-photo-14495890.jpeg" alt="Deuxième chambre">
+    <p class="description">
+      Cette magnifique propriété familiale offre un cadre calme, lumineux et parfaitement aménagé.
+      Idéale pour une vie confortable, elle propose de grands espaces, une cuisine équipée moderne
+      et une piscine privée entourée d’un jardin soigné.
+    </p>
   </div>
+</div>
 
-  <h2 style="margin-top: 50px;">Caractéristiques</h2>
-  <p class="description">
-    • Surface habitable : 240 m²<br>
-    • Terrain : 1 100 m²<br>
-    • 5 chambres<br>
-    • 3 salles de bain<br>
-    • Piscine privée<br>
-    • Cuisine équipée premium<br>
-    • Grandes baies vitrées<br>
-    • Quartier résidentiel calme<br>
-    • Maison entièrement rénovée<br>
-    • Isolation renforcée & chauffage performant<br>
-    • Orientation idéale pour la luminosité<br>
-  </p>
+<!-- GALERIE -->
+<div class="gallery">
+  <img src="https://images.pexels.com/photos/12700527/pexels-photo-12700527.jpeg">
+  <img src="https://images.pexels.com/photos/15580481/pexels-photo-15580481.jpeg">
+  <img src="https://images.pexels.com/photos/15580488/pexels-photo-15580488.jpeg">
+  <img src="https://images.pexels.com/photos/14495890/pexels-photo-14495890.jpeg">
+</div>
 
+<!-- CARACTÉRISTIQUES -->
+<div class="features">
+  • 240 m² habitables — terrain 1 100 m²<br>
+  • 5 chambres — 3 salles de bain<br>
+  • Piscine privée & jardin paysager<br>
+  • Quartier résidentiel calme<br>
+  • Cuisine moderne & grandes baies vitrées<br>
+  • Maison rénovée récemment
 </div>
 
 <footer>
-  Page fictive créée pour démonstration Noyer.<br>
-  Images libres de droits — Pexels.
+  Page fictive — démonstration Noyer. Photos : Pexels.
 </footer>
 
 </body>
