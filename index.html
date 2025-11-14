@@ -18,18 +18,24 @@
       color: #222;
     }
 
+    /* HEADER -------------------------------------- */
     header {
       background: #111;
-      padding: 22px 30px;
+      padding: 18px 30px;
       color: white;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 15px;
+    }
+
+    header img {
+      height: 42px;
+      width: auto;
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.6rem;
+      font-size: 1.45rem;
       font-weight: 700;
       letter-spacing: 1px;
     }
@@ -61,6 +67,53 @@
       margin-bottom: 20px;
     }
 
+
+    /* BUTTONS -------------------------------------- */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin: 25px 0 35px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-green {
+      background: #1ea97b;
+      color: white;
+    }
+
+    .btn-green:hover { background: #18855f; }
+
+    .btn-gold {
+      background: #cfa557;
+      color: white;
+    }
+
+    .btn-gold:hover { background: #b48a3d; }
+
+    .btn-outline {
+      background: white;
+      color: #333;
+      border: 2px solid #ddd;
+    }
+
+    .btn-outline:hover {
+      border-color: #999;
+    }
+
+
+    /* GALLERY -------------------------------------- */
     .gallery {
       display: grid;
       gap: 18px;
@@ -75,10 +128,17 @@
       border-radius: 10px;
     }
 
+
+    /* DESCRIPTION -------------------------------------- */
     .description {
-      margin-top: 40px;
+      margin-top: 35px;
       line-height: 1.7;
       font-size: 1.05rem;
+    }
+
+    .description span {
+      font-weight: 600;
+      color: #111;
     }
 
     footer {
@@ -94,9 +154,10 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
+  <img src="https://i.imgur.com/igKAC9A.png" alt="Logo B Immobilier">
   <h1>B Immobilier</h1>
-  <span>Agence fictive — Démonstration</span>
 </header>
 
 <div class="hero"></div>
@@ -106,15 +167,25 @@
   <h2>Maison familiale avec piscine — Quartier résidentiel</h2>
   <p class="price">749 000 €</p>
 
+  <!-- BUTTONS -->
+  <div class="btn-row">
+    <a href="#" class="btn btn-green">Déposer votre candidature</a>
+    <a href="#" class="btn btn-gold">Demander une visite</a>
+    <a href="#" class="btn btn-outline">+ de caractéristiques</a>
+  </div>
+
   <p class="description">
-    Découvrez cette superbe maison familiale située dans un quartier calme et verdoyant.
-    Avec son architecture élégante, ses grands volumes, son jardin parfaitement entretenu
-    et sa magnifique piscine, cette propriété offre un cadre de vie idéal pour une famille
-    recherchant confort, modernité et intimité.
+    Découvrez cette <span>magnifique propriété familiale</span> située dans l’un des quartiers les plus calmes et recherchés de la région. 
+    Cette maison combine parfaitement charme, élégance moderne et espaces généreux.
     <br><br>
-    Le rez-de-chaussée propose plusieurs espaces de vie lumineux, une cuisine entièrement équipée,
-    ainsi qu’un accès direct à la terrasse et au jardin. L’étage accueille plusieurs chambres spacieuses,
-    dont une suite parentale.
+    Au rez-de-chaussée, vous trouverez un vaste séjour baigné de lumière naturelle, 
+    une salle à manger ouverte sur une cuisine entièrement équipée, un coin lecture ainsi qu’un accès direct 
+    vers la terrasse et la piscine. L’étage propose <span>cinq chambres spacieuses</span> dont une suite parentale 
+    avec dressing et salle de bain privative.
+    <br><br>
+    À l’extérieur, un jardin parfaitement aménagé, une piscine privée entourée d’un espace détente, 
+    et plusieurs zones de convivialité permettent de profiter pleinement du calme environnant. 
+    Cette maison est idéale pour les familles recherchant un bien clé en main offrant confort, tranquillité et prestations haut de gamme.
   </p>
 
   <h2>Photos du bien</h2>
@@ -134,16 +205,19 @@
     • 5 chambres<br>
     • 3 salles de bain<br>
     • Piscine privée<br>
-    • Cuisine équipée haut de gamme<br>
+    • Cuisine équipée premium<br>
+    • Grandes baies vitrées<br>
     • Quartier résidentiel calme<br>
-    • Construction récente<br>
+    • Maison entièrement rénovée<br>
+    • Isolation renforcée & chauffage performant<br>
+    • Orientation idéale pour la luminosité<br>
   </p>
 
 </div>
 
 <footer>
-  Page 100% fictive — Créée pour une démonstration Noyer.<br>
-  Les images proviennent de Pexels (libres de droits).
+  Page fictive créée pour démonstration Noyer.<br>
+  Images libres de droits — Pexels.
 </footer>
 
 </body>
