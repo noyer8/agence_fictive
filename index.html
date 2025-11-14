@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B Immobilier — Maison familiale avec piscine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      padding: 22px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      width: 100%;
+      height: 420px;
+      background-image: url('https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.7rem;
+      color: #111;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      color: #1ea97b;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .description {
+      margin-top: 40px;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      background: #111;
+      text-align: center;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>B Immobilier</h1>
+  <span>Agence fictive — Démonstration</span>
+</header>
+
+<div class="hero"></div>
+
+<div class="container">
+
+  <h2>Maison familiale avec piscine — Quartier résidentiel</h2>
+  <p class="price">749 000 €</p>
+
+  <p class="description">
+    Découvrez cette superbe maison familiale située dans un quartier calme et verdoyant.
+    Avec son architecture élégante, ses grands volumes, son jardin parfaitement entretenu
+    et sa magnifique piscine, cette propriété offre un cadre de vie idéal pour une famille
+    recherchant confort, modernité et intimité.
+    <br><br>
+    Le rez-de-chaussée propose plusieurs espaces de vie lumineux, une cuisine entièrement équipée,
+    ainsi qu’un accès direct à la terrasse et au jardin. L’étage accueille plusieurs chambres spacieuses,
+    dont une suite parentale.
+  </p>
+
+  <h2>Photos du bien</h2>
+
+  <div class="gallery">
+    <img src="https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg" alt="Façade de la maison">
+    <img src="https://images.pexels.com/photos/12700527/pexels-photo-12700527.jpeg" alt="Jardin et piscine">
+    <img src="https://images.pexels.com/photos/15580481/pexels-photo-15580481.jpeg" alt="Cuisine moderne">
+    <img src="https://images.pexels.com/photos/15580488/pexels-photo-15580488.jpeg" alt="Chambre principale">
+    <img src="https://images.pexels.com/photos/14495890/pexels-photo-14495890.jpeg" alt="Deuxième chambre">
+  </div>
+
+  <h2 style="margin-top: 50px;">Caractéristiques</h2>
+  <p class="description">
+    • Surface habitable : 240 m²<br>
+    • Terrain : 1 100 m²<br>
+    • 5 chambres<br>
+    • 3 salles de bain<br>
+    • Piscine privée<br>
+    • Cuisine équipée haut de gamme<br>
+    • Quartier résidentiel calme<br>
+    • Construction récente<br>
+  </p>
+
+</div>
+
+<footer>
+  Page 100% fictive — Créée pour une démonstration Noyer.<br>
+  Les images proviennent de Pexels (libres de droits).
+</footer>
+
+</body>
+</html>
