@@ -4,101 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B Immobilier — Maison familiale avec piscine</title>
-  <title>B Immobilier — Villa Horizon</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --primary: #0f3d3e;
-      --accent: #e0b973;
-      --text: #1c1c1c;
-      --muted: #6c757d;
-      --bg: #f8f9fb;
-      --card: #ffffff;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
       background: #f5f5f5;
       color: #222;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
     }
 
     header {
       background: #111;
       padding: 22px 30px;
       color: white;
-      background: var(--card);
-      box-shadow: 0 8px 24px rgba(15, 61, 62, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .header-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 18px 24px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
       align-items: center;
-      gap: 12px;
     }
 
     header h1 {
       margin: 0;
       font-size: 1.6rem;
-    .brand span {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: #fff;
       font-weight: 700;
       letter-spacing: 1px;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .brand strong {
-      font-size: 1.3rem;
-      letter-spacing: 0.04em;
-      color: var(--primary);
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .contact span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .hero {
@@ -107,138 +40,18 @@
       background-image: url('https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg');
       background-size: cover;
       background-position: center;
-      position: relative;
-      height: 520px;
-      background: url('https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg') center/cover no-repeat;
-      color: #fff;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, rgba(15, 61, 62, 0.85), rgba(15, 61, 62, 0.1));
-    }
-
-    .hero-content {
-      position: relative;
-      max-width: 1160px;
-      margin: 0 auto;
-      height: 100%;
-      padding: 60px 24px 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.3rem, 4vw, 3.4rem);
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .hero .location {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      opacity: 0.85;
-    }
-
-    .hero .price-tag {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    .cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 12px;
-    }
-
-    .btn {
-      padding: 12px 26px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #1d2a32;
-      box-shadow: 0 12px 30px rgba(224, 185, 115, 0.3);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 40px rgba(15, 61, 62, 0.12);
-    }
-
-    main {
-      max-width: 1160px;
-      margin: -60px auto 80px;
-      padding: 0 24px;
-      position: relative;
-    }
-
-    .cards-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 18px;
-    }
-
-    .stat-card {
-      background: var(--card);
-      padding: 24px;
-      border-radius: 18px;
-      box-shadow: 0 16px 40px rgba(15, 61, 62, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .stat-card span {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--muted);
     }
 
     .container {
       max-width: 1080px;
       margin: 40px auto;
       padding: 0 20px;
-    .stat-card strong {
-      font-size: 1.4rem;
-      color: var(--primary);
-    }
-
-    section {
-      margin-top: 60px;
     }
 
     h2 {
       margin-bottom: 10px;
       font-size: 1.7rem;
       color: #111;
-      font-size: 1.9rem;
-      margin-bottom: 16px;
-      color: var(--primary);
     }
 
     .price {
@@ -246,87 +59,13 @@
       color: #1ea97b;
       font-weight: bold;
       margin-bottom: 20px;
-    .lead {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 780px;
-    }
-
-    .content-grid {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      margin-top: 30px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 28px;
-      border-radius: 18px;
-      box-shadow: 0 20px 40px rgba(15, 61, 62, 0.08);
-    }
-
-    .highlights ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 16px;
-    }
-
-    .highlights li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .highlights li::before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      margin-top: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .details-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-    }
-
-    .details-table tr {
-      border-bottom: 1px solid #eef0f3;
-    }
-
-    .details-table th,
-    .details-table td {
-      padding: 14px 0;
-      text-align: left;
-    }
-
-    .details-table th {
-      width: 40%;
-      color: var(--muted);
-      font-weight: 500;
     }
 
     .gallery {
-      margin-top: 30px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       margin-top: 20px;
-    }
-
-    .gallery figure {
-      margin: 0;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(15, 61, 62, 0.1);
-      background: #000;
     }
 
     .gallery img {
@@ -334,81 +73,21 @@
       height: 220px;
       object-fit: cover;
       border-radius: 10px;
-      display: block;
-      transition: transform 0.4s ease;
     }
 
     .description {
       margin-top: 40px;
       line-height: 1.7;
       font-size: 1.05rem;
-    .gallery figure:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery figcaption {
-      padding: 14px;
-      font-size: 0.88rem;
-      color: var(--muted);
-      background: var(--card);
-    }
-
-    .agent-card {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .agent-info {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .agent-avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, var(--primary), #1f6b6d);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 1.2rem;
     }
 
     footer {
       margin-top: 60px;
       padding: 25px;
       background: #111;
-      padding: 40px 24px;
-      background: #101c1d;
-      color: #d9e2e3;
       text-align: center;
       color: #bbb;
       font-size: 0.9rem;
-      font-size: 0.92rem;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    @media (max-width: 720px) {
-      .hero {
-        height: auto;
-      }
-
-      .hero-content {
-        padding: 120px 20px 60px;
-      }
-
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
     }
   </style>
 </head>
@@ -418,20 +97,6 @@
 <header>
   <h1>B Immobilier</h1>
   <span>Agence fictive — Démonstration</span>
-  <div class="header-inner">
-    <div class="brand">
-      <span>B</span>
-      <div>
-        <strong>B Immobilier</strong><br>
-        <small style="color: var(--muted);">Maisons d'exception & espaces de vie</small>
-      </div>
-    </div>
-    <div class="contact">
-      <span>📞 01 86 45 22 10</span>
-      <span>✉️ contact@b-immobilier.fr</span>
-      <span>📍 18 avenue des Arts, Bordeaux</span>
-    </div>
-  </div>
 </header>
 
 <div class="hero"></div>
@@ -453,20 +118,6 @@
   </p>
 
   <h2>Photos du bien</h2>
-<section class="hero">
-  <div class="hero-content">
-    <div class="location">Bordeaux — Quartier Caudéran</div>
-    <h1>Villa Horizon, écrin contemporain avec piscine</h1>
-    <div class="price-tag">749 000 € • Mandat exclusif</div>
-    <p style="max-width: 520px; font-size: 1.05rem; opacity: 0.9;">
-      Une villa familiale baignée de lumière, pensée pour conjuguer vie intérieure confortable et moments conviviaux en extérieur. Architecture contemporaine, volumes généreux et prestations haut de gamme.
-    </p>
-    <div class="cta-group">
-      <button class="btn btn-primary">Télécharger la brochure</button>
-      <button class="btn btn-outline">Programmer une visite</button>
-    </div>
-  </div>
-</section>
 
   <div class="gallery">
     <img src="https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg" alt="Façade de la maison">
@@ -474,28 +125,6 @@
     <img src="https://images.pexels.com/photos/15580481/pexels-photo-15580481.jpeg" alt="Cuisine moderne">
     <img src="https://images.pexels.com/photos/15580488/pexels-photo-15580488.jpeg" alt="Chambre principale">
     <img src="https://images.pexels.com/photos/14495890/pexels-photo-14495890.jpeg" alt="Deuxième chambre">
-<main>
-  <div class="cards-row">
-    <div class="stat-card">
-      <span>Surface habitable</span>
-      <strong>240 m²</strong>
-      <p style="color: var(--muted);">Espaces ouverts, double hauteur et baies vitrées panoramiques.</p>
-    </div>
-    <div class="stat-card">
-      <span>Extérieurs</span>
-      <strong>1 100 m²</strong>
-      <p style="color: var(--muted);">Jardin paysagé, terrasse bois exotique, piscine chauffée 10x4 m.</p>
-    </div>
-    <div class="stat-card">
-      <span>Chambres</span>
-      <strong>5 suites</strong>
-      <p style="color: var(--muted);">Suite parentale avec dressing et salle d'eau privative.</p>
-    </div>
-    <div class="stat-card">
-      <span>Stationnement</span>
-      <strong>2 garages</strong>
-      <p style="color: var(--muted);">Bornes de recharge et rangements intégrés.</p>
-    </div>
   </div>
 
   <h2 style="margin-top: 50px;">Caractéristiques</h2>
@@ -509,99 +138,12 @@
     • Quartier résidentiel calme<br>
     • Construction récente<br>
   </p>
-  <section>
-    <h2>Vivre dans la villa Horizon</h2>
-    <p class="lead">
-      Conçue en 2021 par un cabinet bordelais reconnu, cette propriété associe matériaux nobles, performances énergétiques et domotique intégrée. Les pièces de vie s'articulent autour d'un patio central, offrant une circulation fluide entre intérieur et extérieur.
-    </p>
-    <div class="content-grid">
-      <article class="card highlights">
-        <h3 style="margin-top: 0; color: var(--primary);">Atouts majeurs</h3>
-        <ul>
-          <li>Luminosité exceptionnelle grâce aux larges baies et aux puits de lumière.</li>
-          <li>Pièce de vie de 70 m² avec cheminée contemporaine et cuisine Bulthaup.</li>
-          <li>Suite parentale donnant sur terrasse privative et jacuzzi.</li>
-          <li>Studio indépendant idéal pour télétravail ou invités.</li>
-          <li>Prestations premium : plancher chauffant/rafraîchissant, système audio multiroom.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 style="margin-top: 0; color: var(--primary);">Distribution des espaces</h3>
-        <table class="details-table">
-          <tr>
-            <th>Rez-de-chaussée</th>
-            <td>Entrée cathédrale, séjour traversant, cuisine équipée, arrière-cuisine, bureau, suite invités.</td>
-          </tr>
-          <tr>
-            <th>Étage</th>
-            <td>Suite parentale, 3 chambres avec salles d'eau, salle TV familiale, lingerie.</td>
-          </tr>
-          <tr>
-            <th>Extérieur</th>
-            <td>Jardin paysagé, piscine à débordement, pool-house avec cuisine d'été, terrain de pétanque.</td>
-          </tr>
-          <tr>
-            <th>Services</th>
-            <td>Domotique complète, alarme, vidéosurveillance, arrosage automatique.</td>
-          </tr>
-        </table>
-      </article>
-    </div>
-  </section>
-
-  <section>
-    <h2>Galerie photos</h2>
-    <p class="lead">Découvrez les différents espaces de la villa Horizon. Toutes les prises de vue sont réalisées par un photographe d'architecture et libres de droits via Pexels.</p>
-    <div class="gallery">
-      <figure>
-        <img src="https://images.pexels.com/photos/12700529/pexels-photo-12700529.jpeg" alt="Façade contemporaine de la villa">
-        <figcaption>Façade principale et jardin structuré avec éclairages nocturnes.</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.pexels.com/photos/12700527/pexels-photo-12700527.jpeg" alt="Piscine et terrasse en bois">
-        <figcaption>Piscine miroir chauffée entourée de terrasses en bois exotique.</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.pexels.com/photos/15580481/pexels-photo-15580481.jpeg" alt="Cuisine design avec ilot central">
-        <figcaption>Cuisine Bulthaup avec plan de travail en quartz et électroménager Gaggenau.</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.pexels.com/photos/15580488/pexels-photo-15580488.jpeg" alt="Suite parentale lumineuse">
-        <figcaption>Suite parentale avec accès terrasse et dressing sur-mesure.</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.pexels.com/photos/14495890/pexels-photo-14495890.jpeg" alt="Chambre d'amis décorée">
-        <figcaption>Chambre d'amis bénéficiant d'une vue dégagée sur le jardin.</figcaption>
-      </figure>
-    </div>
-  </section>
 
 </div>
-  <section>
-    <h2>Rencontrer notre conseillère</h2>
-    <div class="card agent-card">
-      <div class="agent-info">
-        <div class="agent-avatar">CB</div>
-        <div>
-          <strong style="font-size: 1.1rem;">Camille Bernard</strong><br>
-          <span style="color: var(--muted);">Conseillère immobilier premium</span>
-        </div>
-      </div>
-      <p style="margin: 0; color: var(--muted);">
-        « Chaque projet mérite une attention singulière. Je vous accompagne à chaque étape : estimation, financement, mise en relation avec nos partenaires architectes et artisans. Contactez-moi pour une visite privée ou une estimation personnalisée de votre bien. »
-      </p>
-      <div class="cta-group">
-        <button class="btn btn-primary" style="flex: 1 1 220px;">Demander un rendez-vous</button>
-        <button class="btn btn-outline" style="flex: 1 1 220px;">Appeler Camille</button>
-      </div>
-    </div>
-  </section>
-</main>
 
 <footer>
   Page 100% fictive — Créée pour une démonstration Noyer.<br>
   Les images proviennent de Pexels (libres de droits).
-  Page fictive réalisée pour démonstration. Photos libres de droits — Pexels. | © 2024 B Immobilier. <a href="#">Mentions légales</a> • <a href="#">Politique de confidentialité</a>
 </footer>
 
 </body>
